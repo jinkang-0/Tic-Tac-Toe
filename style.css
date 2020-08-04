@@ -20,12 +20,12 @@ body {
 /* score */
 
 .p-label {
-	margin: 0.5rem;
+	margin-left: 0.5rem;
 }
 
 .p-score {
 	margin: 0.5rem;
-	margin-top: -0.5rem;
+	z-index: 100;
 }
 
 .right {
