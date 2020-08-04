@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tic-Tac-Toe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <p class="p-label">X:</p>
+    <p class="p-score" id="x-score">0</p>
+
+    <div class="right">
+        <p class="p-label">O:</p>
+        <p class="p-score" id="o-score">0</p>
+    </div>
+    
+
+    <div id="grid">
+        <div id="1" onclick="addPiece(this.id);" class="square empty" style="grid-area: tl; margin-left: -1px; padding-right: 1px"></div>
+        <div id="2" onclick="addPiece(this.id);" class="square empty" style="grid-area: t;"></div>
+        <div id="3" onclick="addPiece(this.id);" class="square empty" style="grid-area: tr; margin-right: -1px; padding-left: 1px;"></div>
+
+        <div id="4" onclick="addPiece(this.id);" class="square empty" style="grid-area: ml; margin-left: -1px; padding-right: 1px;"></div>
+        <div id="5" onclick="addPiece(this.id);" class="square empty" style="grid-area: m;"></div>
+        <div id="6" onclick="addPiece(this.id);" class="square empty" style="grid-area: mr; margin-right: -1px; padding-left: 1px;"></div>
+
+        <div id="7" onclick="addPiece(this.id);" class="square empty" style="grid-area: bl; margin-left: -1px; padding-right: 1px;"></div>
+        <div id="8" onclick="addPiece(this.id);" class="square empty" style="grid-area: b;"></div>
+        <div id="9" onclick="addPiece(this.id);" class="square empty" style="grid-area: br; margin-right: -1px; padding-left: 1px;"></div>
+    </div>
+
+    
+
+    <div id="footer">
+        <button class="button" id="clear-score" onclick="clearScore();">Clear Score</button>
+
+        <div class="text-display">
+            <span id="message"></span>
+            <span id="turn">X's Turn</span>
+            <button id="restart" class="button" style="display: none;" onclick="restart();">New Round</button>
+        </div>
+        
+        
+        <button class="button" id="vs-mode" onclick="randomMove();">Random Move</button>
+    </div>
+
+</body>
+</html>
