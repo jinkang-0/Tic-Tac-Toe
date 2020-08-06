@@ -101,6 +101,10 @@ body {
 	align-items: center;
 }
 
+#clear-board {
+	margin-bottom: 5px;
+}
+
 #message {
 	color: var(--azure);
 	font-weight: 800;

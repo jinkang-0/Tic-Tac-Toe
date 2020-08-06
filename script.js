@@ -127,6 +127,17 @@ function restart() {
   document.getElementById("restart").style.display = "none";
 }
 
+function clearBoard() {
+  restart();
+  round--;
+  if (turn == "X") {
+    turn = "O";
+  } else {
+    turn = "X";
+  }
+  document.getElementById("turn").innerHTML = `${turn}'s Turn`;
+}
+
 function clearScore() {
   x_score = 0;
   o_score = 0;

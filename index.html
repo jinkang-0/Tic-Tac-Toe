@@ -38,7 +38,10 @@
     
 
     <div id="footer">
-        <button class="button" id="clear-score" onclick="clearScore();">Clear Score</button>
+        <div style="display: flex; flex-direction: column;">
+            <button id="clear-board" class="button" onclick="clearBoard();">Reset Board</button>
+            <button class="button" id="clear-score" onclick="clearScore();">Reset Score</button>
+        </div>
 
         <div class="text-display">
             <span id="message"></span>
