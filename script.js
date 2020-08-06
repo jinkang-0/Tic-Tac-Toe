@@ -72,6 +72,7 @@ function checkWin() {
 
     document.getElementById("message").innerHTML = `${winner} Won!`;
     document.getElementById("turn").style.display = "none";
+    document.getElementById("clear-board").style.display = "none";
     document.getElementById("restart").style.display = "block";
 
     if (winner == "X") {
@@ -95,6 +96,7 @@ function checkWin() {
     if (empty >= 9) {
       document.getElementById("message").innerHTML = "Tied!";
       document.getElementById("turn").style.display = "none";
+      document.getElementById("clear-board").style.display = "none";
       document.getElementById("restart").style.display = "block";
     }
   }
@@ -124,6 +126,7 @@ function restart() {
   document.getElementById("message").innerHTML = '';
   document.getElementById("turn").innerHTML = `${turn}'s Turn`;
   document.getElementById("turn").style.display = "inline";
+  document.getElementById("clear-board").style.display = "block";
   document.getElementById("restart").style.display = "none";
 }
 
