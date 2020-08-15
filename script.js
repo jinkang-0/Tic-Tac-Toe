@@ -17,7 +17,6 @@ function addPiece(id) {
   } else if (col + 1 > 3) {
     col = (col+1)%4;
   }
-  console.log(turn, "at", row, col);
 
   if (grid[row][col] == "" && document.getElementById(id).classList.contains("empty")) {
     if (turn == "X") {
@@ -40,7 +39,6 @@ function checkWin() {
   for (var i = 0; i < 3; i++) {
     if (grid[i][0] == grid[i][1] && grid[i][1] == grid[i][2] && grid[i][0] != "") {
       winner = grid[i][0];
-      console.log("winner by vertical check");
     }
   }
 
@@ -48,19 +46,16 @@ function checkWin() {
   for (var i = 0; i < 3; i++) {
     if (grid[0][i] == grid[1][i] && grid[1][i]== grid[2][i] && grid[0][i] != "") {
       winner = grid[0][i];
-      console.log("winner by horizontal check");
     }
   }
 
   // diagonal
   if (grid[0][0] == grid[1][1] && grid[1][1] == grid[2][2] && grid[0][0] != "") {
     winner = grid[0][0];
-    console.log("winner by diagonal check");
   }
 
   if (grid[0][2] == grid[1][1] && grid[1][1] == grid[2][0] && grid[0][2] != "") {
     winner = grid[0][2];
-    console.log("winner by diagonal check");
   }
   
   let square = document.getElementsByClassName("square");
@@ -153,6 +148,6 @@ function randomMove() {
   let square = document.getElementsByClassName("empty");
   let random = Math.floor(Math.random() * square.length);
 
-  addPiece(square[random].id);
+  if (!winner) addPiece(square[random].id);
 
 }

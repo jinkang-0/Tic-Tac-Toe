@@ -148,3 +148,50 @@ body {
 	float: right;
 	margin-right: 2rem;
 }
+
+@media (max-width: 500px) {
+	#grid {
+		top: calc((75vh - 50%) / 2);
+		width: 50vh;
+		height: 50%;
+	}
+
+	.square span {
+		transform: translateX(15px);
+	}
+
+	.button {
+		width: 20vw;
+		height: 8vw;
+		font-size: 3vw;
+		margin-left: 20px;
+	}
+
+	#vs-mode {
+		margin-right: 20px;
+	}
+}
+
+@media (max-width: 350px) {
+	#grid {
+		top: calc((75vh - 40%) / 2);
+		width: 40vh;
+		height: 40%;
+	}
+
+	.square span {
+		transform: translateX(10px);
+	}
+
+	.button {
+		width: 20vw;
+		height: 10vw;
+		font-size: 4vw;
+		margin-left: 20px;
+		margin-right: 10px;
+	}
+
+	#vs-mode {
+		margin-right: 20px;
+	}
+}
